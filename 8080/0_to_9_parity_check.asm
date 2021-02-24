@@ -1,6 +1,6 @@
 	 ORG 800H  
 	 MVI B,48  
-PETLA  
+LOOP  
 	 MOV A,B  
 	 ANI 1  
 	 JZ EVEN  
@@ -13,7 +13,7 @@ EVEN
 	 RST 3  
 	 MOV A,B  
 	 CPI 58  
-	 JNZ PETLA  
+	 JNZ LOOP  
 	 HLT  
 ODD  
 	 MOV A,B  
@@ -23,7 +23,7 @@ ODD
 	 RST 3  
 	 MOV A,B  
 	 CPI 58  
-	 JNZ PETLA  
+	 JNZ LOOP  
 	 HLT  
 TEXTEVEN 	 DB ': i parzyste',10,13,'@'      
 TEXTODD 	 DB ': i nieparzyste',10,13,'@'      
